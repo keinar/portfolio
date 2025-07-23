@@ -19,19 +19,7 @@ The site showcases my professional skills in QA automation, fullstack developmen
 - Categorized display of frontend, backend, testing, DevOps, and database skills
 - Fast-loading and minimalistic
 
-## 🚀 Deployment
-
-The site can be deployed to platforms like:
-- GitHub Pages
-- Render
-- Netlify
-- cPanel (manual upload)
-
 ## 🧑‍💻 Author
 
 Crafted with care by Keinar Elkayam.
 Connect with me on [LinkedIn](https://www.linkedin.com/in/keinar-elkayam/) or check out my GitHub projects.
-
----
-
-> Clean. Professional. Focused.
