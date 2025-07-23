@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animated gradient background */
+.bg-gradient-animated {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 300% 300%;
+}
+.animate-gradient {
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Hide scrollbar for side projects */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Body defaults */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f1a;
+  color: white;
+}
+
+section#top {
+  background-color: #0f0f1a;
+}
+
+.text-primary {
+  color: #4ade80;
+}
+.rfm-marquee {
+  min-width: unset !important;
+}
