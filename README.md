@@ -1,12 +1,37 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website, built with **React** and **Vite**, and styled using **Tailwind CSS**.
+The site showcases my professional skills in QA automation, fullstack development, and DevOps.
 
-Currently, two official plugins are available:
+## 🔧 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React (with Vite)
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- React Fast Marquee
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Animated tech stack section with smooth horizontal scroll
+- Responsive and optimized for desktop and mobile
+- Dark mode design for modern look and feel
+- Categorized display of frontend, backend, testing, DevOps, and database skills
+- Fast-loading and minimalistic
+
+## 🚀 Deployment
+
+The site can be deployed to platforms like:
+- GitHub Pages
+- Render
+- Netlify
+- cPanel (manual upload)
+
+## 🧑‍💻 Author
+
+Crafted with care by Keinar Elkayam.
+Connect with me on [LinkedIn](https://www.linkedin.com/in/keinar-elkayam/) or check out my GitHub projects.
+
+---
+
+> Clean. Professional. Focused.
