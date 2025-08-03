@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bug, FileSearch, Cpu } from "lucide-react";
+import { Bug, FileSearch, Cpu, Mail } from "lucide-react";
 
 const featured = [
   {
@@ -12,7 +12,7 @@ const featured = [
   {
     icon: <FileSearch className="w-8 h-8 text-primary" />,
     title: "Pytest RCA Report",
-    desc: "AI-powered Root cause analysis tool for Pytest with clear failure insights.",
+    desc: "AI-powered Root cause analysis tool for Pytest with clear failure insights. Available as a PyPI library.",
     url: "https://github.com/keinar/Pytest-RCA-Report",
     tech: ["Python", "Pytest", "AI", "HTML" ,"CSS", "JS"],
   },
@@ -22,6 +22,13 @@ const featured = [
     desc: "Auto-generate test design docs using AI-driven templates.",
     url: "https://github.com/keinar/AI-STD-Generator",
     tech: ["Python", "AI", "Streamlit"],
+  },
+  {
+    icon: <Mail className="w-8 h-8 text-primary" />,
+    title: "Allure Emailer",
+    desc: "Send Allure test reports via email. Available as a PyPI library.",
+    url: "https://github.com/keinar/allure-emailer",
+    tech: ["Python", "Allure", "Email"],
   },
 ];
 
