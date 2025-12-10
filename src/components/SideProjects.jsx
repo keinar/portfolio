@@ -1,19 +1,6 @@
 import { motion } from "framer-motion";
 
 const side = [
-  {
-    title: "Balloon Pop Game",
-    desc: "Interactive & Responsive web game with sound effects.",
-    url: "https://github.com/keinar/balloon-pop_game",
-    live: "https://keinar.com/pop-game",
-    tech: ["HTML", "JS", "CSS"],
-  },
-  {
-    title: "Mister Email",
-    desc: "Email client with React & Vite (Gmail clone).",
-    url: "https://github.com/keinar/misterEmail",
-    tech: ["React", "Vite", "SCSS"],
-  },
     {
     title: "Nearby Shelter",
     desc: "Geolocation-based web app that guides you to the nearest shelters with interactive maps and real-time updates.",
