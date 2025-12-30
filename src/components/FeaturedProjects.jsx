@@ -4,10 +4,10 @@ import { Bug, FileSearch, Cpu, Mail, Camera, Workflow } from "lucide-react";
 const featured = [
   {
     icon: <Workflow className="w-8 h-8 text-primary" />,
-    title: "Playwright Automation Framework",
-    desc: "Advanced E2E testing framework for the Photographer Gallery. Features Hybrid Testing (UI + API), Page Object Model (POM), and CI/CD integration.",
+    title: "Full-Stack Playwright Automation System",
+    desc: "A scalable, microservices-based automation platform orchestrated via Docker and RabbitMQ. Features a custom Producer-Worker architecture for distributed execution, a real-time React Dashboard (Socket.io), and Generative AI (Gemini) for automated root-cause analysis of test failures.",
     url: "https://github.com/keinar/Playwright-Full-Stack-Framework",
-    tech: ["TypeScript", "Playwright", "GitHub Actions", "Allure"],
+    tech: ["TypeScript", "Playwright", "GitHub Actions", "Allure", "Docker & DevOps", "Microservices", "RabbitMQ", "React & Node.js", "GenAI"],
   },
   {
     icon: <Camera className="w-8 h-8 text-primary" />,
@@ -71,7 +71,7 @@ export default function FeaturedProjects() {
                   {p.title}
                 </h3>
               </div>
-              <p className="text-sm opacity-90 mb-4 h-20 md:h-16">{p.desc}</p>
+              <p className="text-sm opacity-90 mb-4 h-20 md:h-auto">{p.desc}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {p.tech.map((t) => (
                   <span
