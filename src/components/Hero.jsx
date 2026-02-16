@@ -1,69 +1,75 @@
-// src/components/Hero.jsx
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Terminal } from "lucide-react";
 import profile from "../assets/profile.png";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-32 bg-bg text-center space-y-10"
+      className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-32 bg-background relative overflow-hidden"
     >
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] animate-pulse delay-1000" />
+      </div>
 
-            {/* תמונה אישית */}
-      <motion.img
-        src={profile}
-        alt="Keinar Elkayam"
-        className="w-60 h-60 md:w-58 md:h-58 rounded-full ring-4 ring-primary object-cover mt-3"
+      <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1.0, duration: 0.6 }}
-      />
-
-      {/* כותרת ראשית עם gradient */}
-      <motion.h1
-        className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight max-w-3xl"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 mb-10"
       >
-        <span className="inline-block text-white">I’m</span>{" "}
-        <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary py-2">
-          Keinar Elkayam
-        </span>
-      </motion.h1>
+        <div className="relative w-52 h-52 md:w-64 md:h-64 group">
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full animate-spin-slow opacity-75 blur-md group-hover:opacity-100 transition-opacity duration-500" />
+          <img
+            src={profile}
+            alt="Keinar Elkayam"
+            className="w-full h-full rounded-full object-cover relative z-10 p-1 bg-background"
+          />
+        </div>
+      </motion.div>
 
-      {/* קו אדום דק תחת הכותרת */}
       <motion.div
-        className="w-24 h-1 bg-secondary rounded-full"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-      />
-
-      {/* תת־כותרת מודגשת */}
-      <motion.p
-        className="text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed tracking-wide"
+        className="text-center space-y-6 relative z-10 max-w-4xl"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.7 }}
+        transition={{ delay: 0.2, duration: 0.7 }}
       >
-        <span className="font-semibold uppercase">QA & Automation Engineer</span>{" "}
-        optimizing test workflows to <span className="text-primary">eliminate errors</span>{" "}
-        and <span className="text-secondary">accelerate releases</span> with
-        rock-solid CI/CD.
-      </motion.p>
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-2">
+          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Keinar</span>
+        </h1>
 
-      {/* CTA עם אייקון חץ */}
-      <motion.a
-        href="#featured"
-        className="mt-6 inline-flex items-center gap-2 px-8 py-4 bg-primary text-bg font-semibold rounded-full hover:scale-105 transition"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      >
-        See My Work <ArrowRight className="w-5 h-5" />
-      </motion.a>
+        <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+
+        <h2 className="text-2xl md:text-3xl font-medium text-slate-300">
+          QA Automation Engineer & Full-Stack Developer
+        </h2>
+
+        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          Over 5 years of experience specializing in complex <span className="text-primary font-medium">test automation</span>, <span className="text-primary font-medium">infrastructure</span>, and <span className="text-secondary font-medium">full-stack development</span>. Passionate about Python, advanced data structures, and building robust, scalable applications.
+        </p>
+
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
+          <a
+            href="#featured"
+            className="group px-8 py-4 bg-primary hover:bg-primary/90 text-background font-bold rounded-full transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
+          >
+            View Projects <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full backdrop-blur-sm border border-white/10 transition-colors flex items-center justify-center gap-2"
+          >
+            Contact Me
+          </a>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

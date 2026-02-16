@@ -1,74 +1,79 @@
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const side = [
-    {
-    title: "Nearby Shelter",
-    desc: "Geolocation-based web app that guides you to the nearest shelters with interactive maps and real-time updates.",
-    url: "https://github.com/keinar/NearbyShelter",
-    tech: ["TypeScript", "React Native", "Node.js", "Google Maps API"],
+  {
+    title: "Web Development Solutions",
+    desc: "Designed and deployed custom business platforms focusing on high performance and SEO. Examples include Nirosta Lotem and Sod Ha'Otiyot.",
+    // url: "https://digital-solution.co.il", // Assuming this, or keep generic if no single link
+    tech: ["Reaction", "SEO", "Performance", "UI/UX"],
   },
-    {
-    title: "Lancerr",
-    desc: "Full-stack Fiverr-clone with vendor profiles, gig listings etc.",
-    url: "https://github.com/keinar/Lancerr",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+  {
+    title: "Timed Access Pass",
+    desc: "An official, custom-built WordPress plugin approved and hosted on the WordPress.org directory. Manages time-restricted content access.",
+    url: "https://wordpress.org/plugins/timed-access-pass/", // Verify URL if possible, defaulting to likely structure
+    tech: ["PHP", "WordPress", "Plugin Dev"],
+  },
+  {
+    title: "Peak Masters",
+    desc: "Developed a complete custom Roblox game from the ground up, featuring custom Lua scripting, 3D modeling, and game mechanics.",
+    // url: "https://www.roblox.com/games/...", // Placeholder or remove if not available
+    tech: ["Lua", "Roblox Studio", "Game Design"],
   },
 ];
 
 export default function SideProjects() {
   return (
-    <section className="py-16 bg-bg/80">
-      <div className="max-w-5xl mx-auto px-6">
-        <h3 className="text-2xl font-semibold text-secondary mb-8 text-center">
-          Other Creations
+    <section className="py-20 bg-background relative border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-6">
+        <h3 className="text-3xl font-bold text-slate-200 mb-12 text-center">
+          Side Projects & Freelance
         </h3>
-        <div className="flex flex-col md:flex-row gap-6 hide-scrollbar overflow-auto">
-        {side.map((p, i) => (
-          <motion.div
-            key={p.title}
-            className="flex-1 bg-glass backdrop-blur-lg border border-white/20 p-5 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.2, duration: 0.6 }}
-          >
-            <h4 className="text-lg font-semibold text-primary mb-2">
-              {p.title}
-            </h4>
-            <p className="text-sm opacity-90 mb-3">{p.desc}</p>
-            <div className="flex gap-2 flex-wrap mb-3">
-              {p.tech.map((t) => (
-                <span
-                  key={t}
-                  className="text-[10px] px-2 py-1 rounded-full border border-primary text-primary font-mono"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-            {/* GitHub link */}
-            <a
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary text-sm underline mr-4"
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {side.map((p, i) => (
+            <motion.div
+              key={p.title}
+              className="flex flex-col bg-zinc-900/30 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:border-primary/30 hover:bg-zinc-900/50 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              View on GitHub →
-            </a>
-            <br />
-            {/* Live link, only if exists */}
-            {p.live && (
-              <a
-                href={p.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-500 text-sm underline font-semibold"
-              >
-                View Live →
-              </a>
-            )}
-          </motion.div>
-        ))}
+              <div className="flex-grow">
+                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                  {p.title}
+                </h4>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  {p.desc}
+                </p>
+              </div>
+
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {p.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs font-mono font-medium px-2 py-1 rounded bg-white/5 text-slate-300 border border-white/5"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {p.url && (
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                  >
+                    View Project <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

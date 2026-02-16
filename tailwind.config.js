@@ -4,27 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#0f0f1a",
-        accent: "#4ade80",
-        gold: "#facc15",
-        glass: "rgba(255,255,255,0.1)",
-        dark: "#12181f",
-        primary: "#23f3cf",
-        secondary: "#4ade80",
-        card: "#181f2b",
+        background: "#09090b", // zinc-950
+        primary: "#2dd4bf", // teal-400 - A crisp, modern tech color
+        secondary: "#818cf8", // indigo-400 - Complementary cool tone
+        accent: "#f472b6", // pink-400 - For subtle highlights
+        surface: "#18181b", // zinc-900
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
-      keyframes: {
-        gradientBG: {
-          "0%,100%": { "background-position": "0% 50%" },
-          "50%": { "background-position": "100% 50%" },
-        },
-      },
       animation: {
-        "gradient-bg": "gradientBG 15s ease infinite",
+        "spin-slow": "spin 12s linear infinite",
+        "pulse-slow": "pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "blob": "blob 7s infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
       },
     },
   },
